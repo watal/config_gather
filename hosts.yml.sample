@@ -1,0 +1,12 @@
+---
+host:
+  myhost1:
+    address: "192.0.2.1"
+    id: "myuserid"
+    password: "mypassword"
+    vender: "myvender"
+  myhost2:
+    address: "192.0.2.2"
+    id: "myuserid"
+    password: #mypassword"
+    vender: "myvender2"
