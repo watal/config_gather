@@ -2,8 +2,8 @@
 
 import multiprocessing as mp
 import subprocess
-import sys, os
-import pprint
+import sys
+import os
 
 import yaml
 
@@ -12,7 +12,7 @@ HOST_PATH = 'hosts.yml'
 
 # def config_gather():
 #     '''  '''
-    # モジュールを呼び出して並列実行するようにする
+# モジュールを呼び出して並列実行するようにする
 
 def main():
     # ホスト一覧取得
@@ -28,7 +28,8 @@ def main():
         sys.exit(-1)
 
     for i, j in host['host'].items():
-        subprocess.check_call('sh modules/{}.sh "{}" "{}" "{}" "{}"'.format(j['vender'], i, j['address'], j['id'], j['password']), shell=True)
+        subprocess.check_call('sh modules/{}.sh "{}" "{}" "{}" "{}"'.format(
+            j['vender'], i, j['address'], j['id'], j['password']), shell=True)
 
 
 if __name__ == '__main__':
